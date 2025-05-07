@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation";
 
 import { House } from "lucide-react"
 
-import LoadingPage from "../../lib/loadingpage1.gif";
+// import LoadingPage from "../../lib/loadingpage1.gif";
 
 
 import {
@@ -31,7 +31,7 @@ import { SignUpSchema } from "@/schema/sign-up-schema"
 
 import { registerApi } from "@/api"
 
-import bgs from "../../public/image/Back 2.jpg";
+import bgs from "../../public/image/testbg.png";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -40,7 +40,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
   //state
   const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false);
+  // const [showOverlay, setShowOverlay] = useState(false);
   const router = useRouter();
 
   const form = useForm({
@@ -58,8 +58,8 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
 
   const onSubmit = async (data: z.infer<typeof SignUpSchema>) => {
     setLoading(true);
-    setShowOverlay(false);
-    console.log("data", data)
+    // setShowOverlay(false);
+    // console.log("data", data)
     try {
       const res = await registerApi({
         ho_va_ten: data.ho_va_ten,
@@ -72,7 +72,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
       });
 
       if (res) {
-        setShowOverlay(true);
+        // setShowOverlay(true);
 
         toast.success('🎉 Đăng ký thành công!', {
           duration: 1800,
@@ -96,7 +96,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
   return (
 
     <>
-      {loading && showOverlay && (
+      {/* {loading && showOverlay && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <Image
             src={LoadingPage}
@@ -106,7 +106,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
             priority
           />
         </div>
-      )}
+      )} */}
 
 
       <div className={cn("relative flex flex-col gap-6 min-h-screen", className)} {...props}>
@@ -123,15 +123,15 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
 
         {/* Content with relative positioning to appear above background */}
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-6 px-4 py-8 ">
-          <Card className="overflow-hidden max-w-md w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm my-4 border border-gray-200 dark:border-gray-700">
+          <Card className="overflow-hidden max-w-md w-full bg-blue-500/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 dark:bg-gray-900/90 backdrop-blur-sm my-4 border border-gray-200 dark:border-gray-700">
             <CardContent className="grid p-0 ">
               <Form {...form}>
-                <div className="flex flex-col items-center text-center p-6 pb-0 relative sticky top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-10">
+                <div className="flex flex-col items-center text-center p-6 pb-0 relative sticky top-0  dark:bg-gray-900/90 backdrop-blur-sm z-10">
                   <Link href="/">
                     <House className="p-1 absolute left-5 top-0 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-full shadow-md hover:from-blue-600 hover:to-blue-800 hover:shadow-lg active:scale-95 transition-all duration-300 ease-in-out" />
                   </Link>
-                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white">CHÀO MỪNG ĐẾN VỚI</h1>
-                  <p className="text-balance text-muted-foreground dark:text-gray-400">HỆ THỐNG HỖ TRỢ TƯ VẤN TNUT</p>
+                  <h1 className="text-2xl font-bold text-black dark:text-white">CHÀO MỪNG ĐẾN VỚI</h1>
+                  <p className="text-balance text-black dark:text-gray-400">HỆ THỐNG HỖ TRỢ TƯ VẤN TNUT</p>
                 </div>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
@@ -142,7 +142,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
                     name="ho_va_ten"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="flex items-center text-gray-700 dark:text-gray-200">
+                        <FormLabel className="flex items-center text-black dark:text-gray-200">
                           * HỌ VÀ TÊN
                         </FormLabel>
                         <FormControl>
@@ -159,7 +159,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="flex items-center text-gray-700 dark:text-gray-200">
+                        <FormLabel className="flex items-center text-black dark:text-gray-200">
                           * TÀI KHOẢN (EMAIL)
                         </FormLabel>
                         <FormControl>
@@ -175,7 +175,7 @@ export function SignUpForm({ className, ...props }: React.ComponentProps<"div">)
                     name="password"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="flex items-center text-gray-700 dark:text-gray-200">
+                        <FormLabel className="flex items-center text-black dark:text-gray-200">
                           * MẬT KHẨU (SỐ ĐIỆN THOẠI)
                         </FormLabel>
                         <div className="relative">
