@@ -130,7 +130,7 @@ export function SignInForm({ className, ...props }: React.ComponentProps<"div">)
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-6 px-4 py-8 overflow-auto ">
        
 
-          <Card className="overflow-hidden max-w-md w-full bg-blue-500/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 dark:bg-gray-900/90  my-4 border border-gray-200 dark:border-gray-700">
+          <Card className="overflow-hidden max-w-md w-full bg-blue-500/25 bg-opacity-80 bg-clip-padding backdrop-filter backdrop-blur-lg  dark:bg-gray-900/90  my-4 border border-gray-200 dark:border-gray-700">
             <CardContent className="grid p-0 ">
               <Form {...form}>
                 <div className="flex flex-col items-center text-center p-6 pb-0 relative sticky top-0  dark:bg-gray-900/90 backdrop-blur-sm z-10">
@@ -147,7 +147,7 @@ export function SignInForm({ className, ...props }: React.ComponentProps<"div">)
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="flex items-center text-black dark:text-gray-200">
+                        <FormLabel className="flex items-center text-white dark:text-gray-200">
                           TÀI KHOẢN (EMAIL)
                         </FormLabel>
                         <FormControl>
@@ -163,7 +163,7 @@ export function SignInForm({ className, ...props }: React.ComponentProps<"div">)
                     name="password"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="flex items-center text-black dark:text-gray-200">
+                        <FormLabel className="flex items-center text-white dark:text-gray-200">
                           MẬT KHẨU
                         </FormLabel>
                         <div className="relative">

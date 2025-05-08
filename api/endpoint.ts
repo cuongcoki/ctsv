@@ -3,7 +3,7 @@
 
 
 
-const BASE_URL = "https://aitoan.girc.edu.vn";
+const BASE_URL = "http://14.225.211.7:8511";
 
 export const endpoints = {
   auth: {

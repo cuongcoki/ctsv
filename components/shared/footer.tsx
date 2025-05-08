@@ -48,7 +48,9 @@ export default function Footer({ css, className }: FooterClassName) {
                         <Image src={logo} alt="Logo" width={70} height={70} className="mr-2" />
                         <div className="ml-2  md:text-left">
                             <h2 className="text-white text-xl font-bold">AI Stack</h2>
-                            <p className="text-blue-100 mt-1 text-sm">Viện Nghiên cứu Phát triển Công nghệ cao về Kỹ thuật Công nghiệp</p>
+                            <p className="text-blue-100 mt-1 text-sm">Viện Nghiên cứu Phát triển Công nghệ cao </p>
+                            <p className="text-blue-100 mt-1 text-sm">về Kỹ thuật Công nghiệp</p>
+
                         </div>
                     </div>
 
